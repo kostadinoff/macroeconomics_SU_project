@@ -1,0 +1,166 @@
+---
+title: "Untitled"
+output: html_document
+date: '2022-04-20'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r cars}
+library(tidyverse)
+library(easystats)
+library(gtsummary)
+library(officer)
+library(flextable)
+library(viridis)
+library("ggsci")
+library(colorfindr)
+library(patchwork)
+library(lmtest)
+library(sandwich)
+
+```
+
+```{r}
+#въвеждане на данните
+macro <- read_dta("C:/Users/PC/Desktop/macro_practical.dta")
+macro = as_tibble(macro) 
+```
+
+```{r}
+#изисляване на темпа на растеж (реален) за 2020
+
+
+macro = macro %>% 
+  mutate(gdpc_real_2019 =  GDP_capita_2019 / (1+5.24/100),
+         temp_2020 = gdpc_real_2020/ GDP_capita_2019 * 100 - 100)
+```
+
+```{r}
+#графика за темпа по области
+PLF<- get_colors("https://static.bnr.bg/sites/gallery/pictures/2013/12/10/13-12-10-48263.jpg") %>% 
+  make_palette(n = 28)
+```
+
+
+```{r}
+gdp_plot = macro %>% 
+           ggplot(aes(NUTS_NAME, temp_2020, fill = NUTS_NAME))+
+           geom_col()+
+           coord_flip()+
+           geom_hline(yintercept = -1.828627, size = 1.5)+ 
+           theme_minimal()+
+           theme(legend.position = "F") +
+           theme(text = element_text(size=14))+
+           scale_fill_manual(values = PLF)+
+           theme(axis.title.y = element_blank(),
+           axis.text.y = element_blank(),
+           axis.ticks.y = element_blank())+
+           labs(y = "Реален темп БВП на глава от населението", x ="")
+           #labs(x = "", y= "", title = "Реален темп на растеж на БВП \nна глава от населението по области")
+```
+
+```{r}
+macro = macro %>% 
+  mutate(ag_real_2019 =  agriculture_2019 / (1+5.24/100),
+         ag_real_2020 =  agriculture_2020 / (1+4.20/100),
+         ind_real_2019 =  industry_2019 / (1+5.24/100),
+         ind_real_2020 =  industry_2020 / (1+4.20/100),
+         serv_real_2019 =  Services_2019 / (1+5.24/100),
+         serv_real_2020 =  Services_2020 / (1+4.20/100),
+         temp_ag_2020 = ag_real_2020 / agriculture_2019 * 100 - 100,
+         temp_ind_2020 = ind_real_2020 / industry_2019 * 100 - 100,
+         temp_serv_2020 = serv_real_2020/ Services_2019 * 100 - 100)
+```
+
+```{r}
+serv_plot = macro %>% 
+           ggplot(aes(NUTS_NAME, temp_serv_2020, fill = NUTS_NAME))+
+           geom_col()+
+           coord_flip()+
+           geom_hline(yintercept = -2,28, size = 1.5)+ 
+           theme_minimal()+
+           theme(legend.position = "F") +
+           theme(text = element_text(size=14))+
+           scale_fill_manual(values = PLF)+
+           labs(y = "Реален темп - услуги", x = "")
+```
+
+```{r}
+ind_plot = macro %>% 
+           ggplot(aes(NUTS_NAME, temp_ind_2020, fill = NUTS_NAME))+
+           geom_col()+
+           coord_flip()+
+           geom_hline(yintercept = -3.36, size = 1.5)+ 
+           theme_minimal()+
+           theme(legend.position = "F") +
+           theme(text = element_text(size=14))+
+           scale_fill_manual(values = PLF)+
+           theme(axis.title.y = element_blank(),
+           axis.text.y = element_blank(),
+           axis.ticks.y = element_blank())+
+           labs(x = "", y = "Реален темп - индустрия")
+```
+
+```{r}
+agr_plot = macro %>% 
+           ggplot(aes(NUTS_NAME, temp_ag_2020, fill = NUTS_NAME))+
+           geom_col()+
+           coord_flip()+
+           geom_hline(yintercept = 3.70, size = 1.5)+ 
+           theme_minimal()+
+           theme(legend.position = "F") +
+           theme(text = element_text(size=14))+
+           scale_fill_manual(values = PLF)+
+           labs(x = "", y= "Реален темп - селско стопанство")
+```
+
+```{r}
+table1 =
+  macro %>% 
+  summarise(mean_ag = mean(temp_ag_2020),
+            mean_ind = mean(temp_ind_2020),
+            mean_serv= mean(temp_serv_2020))
+```
+
+```{r}
+fig = (agr_plot + ind_plot) / (serv_plot + gdp_plot)
+```
+
+
+```{r}
+corelacii = macro %>% 
+            mutate(incidence = (zarazeni / total_pop)*100) %>% 
+            select(incidence,unempl_temp,day_l_per_population, temp_ag_2020,temp_ind_2020, temp_serv_2020,) %>% 
+            correlation::correlation()
+```
+
+
+```{r}
+mod1 <- lm(temp_2020 ~ net_diference + day_l_per_population + temp_naeti + jeni_prop,data = macro)
+coeftest(mod1, vcov = vcovHC(mod1, type="HC1"))
+
+```
+
+```{r}
+mod4 <- lm(temp_ind_2020 ~ net_diference + day_l_per_population + temp_naeti + jeni_prop,data = macro)
+coeftest(mod4, vcov = vcovHC(mod4, type="HC1"))
+
+```
+
+```{r}
+mod3 <- lm(temp_serv_2020 ~ net_diference + day_l_per_population + temp_naeti + jeni_prop,data = macro)
+coeftest(mod3, vcov = vcovHC(mod3, type="HC1"))
+
+```
+
+```{r}
+mod2 <- lm(temp_ag_2020  ~ net_diference + day_l_per_population + temp_naeti + jeni_prop,data = macro)
+coeftest(mod2, vcov = vcovHC(mod2, type="HC1"))
+
+
+```
+
