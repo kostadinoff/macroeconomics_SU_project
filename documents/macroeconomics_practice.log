@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.21)  21 APR 2022 00:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.21)  21 APR 2022 01:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -485,7 +485,7 @@ File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__pdf_internal_box=\box52
 ) (macroeconomics_practice.aux
 LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 2
-6.
+5.
 
 (C:\Users\PC\AppData\Local\Programs\MiKTeX\tex/latex/cyrillic\t2acmr.fd
 File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
@@ -608,16 +608,16 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 {C:/Users/PC/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] [3]
 [4] [5]
-Overfull \hbox (7.81374pt too wide) in paragraph at lines 87--88
+Overfull \hbox (7.81374pt too wide) in paragraph at lines 89--90
  []\T2A/cmr/bx/n/12 «‰‡‚Ì‡ ÒÚ‡-ÚËÒ-ÚË-Í‡[] \T2A/cmr/m/n/12 œÂ-‰ÓÒ-Ú‡-‚Â-ÌË ÓÚ
  Ã« Ò‡ ‰‡Ì-ÌË-ÚÂ Á‡ ‚ÒË˜-ÍË Á‡-‡-ÁÂ-ÌË ÓÚ COVID-
  []
 
 [6] [7]
-<gdpc_tem.png, id=139, 1184.17406pt x 715.92468pt>
-File: gdpc_tem.png Graphic file (type png)
-<use gdpc_tem.png>
-Package pdftex.def Info: gdpc_tem.png  used on input line 102.
+<../graphics/gdpc_tem.png, id=141, 1184.17406pt x 715.92468pt>
+File: ../graphics/gdpc_tem.png Graphic file (type png)
+<use ../graphics/gdpc_tem.png>
+Package pdftex.def Info: ../graphics/gdpc_tem.png  used on input line 118.
 (pdftex.def)             Requested size: 660.10257pt x 399.09076pt.
 
 Overfull \vbox (13.15225pt too high) has occurred while \output is active []
@@ -628,41 +628,41 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.106 \newpage
-               <./gdpc_tem.png>] [9]
+l.122 \newpage
+               <../graphics/gdpc_tem.png>]
 
-pdfTeX warning: pdflatex.exe (file ./Graph_2.pdf): PDF inclusion: found PDF ver
-sion <1.6>, but at most version <1.5> allowed
-<Graph_2.pdf, id=152, 433.62pt x 289.08pt>
-File: Graph_2.pdf Graphic file (type pdf)
-<use Graph_2.pdf>
-Package pdftex.def Info: Graph_2.pdf  used on input line 125.
+pdfTeX warning: pdflatex.exe (file ../graphics/Graph_2.pdf): PDF inclusion: fou
+nd PDF version <1.6>, but at most version <1.5> allowed
+<../graphics/Graph_2.pdf, id=148, 433.62pt x 289.08pt>
+File: ../graphics/Graph_2.pdf Graphic file (type pdf)
+<use ../graphics/Graph_2.pdf>
+Package pdftex.def Info: ../graphics/Graph_2.pdf  used on input line 132.
 (pdftex.def)             Requested size: 682.9485pt x 569.08513pt.
 
-Overfull \hbox (59.546pt too wide) in paragraph at lines 123--126
+Overfull \hbox (59.546pt too wide) in paragraph at lines 130--133
  []|  [] 
  []
 
-[10
+[9
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.129 \newpage
-               <./Graph_2.pdf>]
+l.136 \newpage
+               <../graphics/Graph_2.pdf>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 148.
+(Font)              <12> on input line 156.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 148.
+(Font)              <8> on input line 156.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 148.
+(Font)              <6> on input line 156.
 
-Overfull \hbox (56.84073pt too wide) in paragraph at lines 148--160
+Overfull \hbox (56.84073pt too wide) in paragraph at lines 156--168
  [][][] 
  []
 
-
-Overfull \hbox (56.84073pt too wide) in paragraph at lines 171--183
+[10]
+Overfull \hbox (56.84073pt too wide) in paragraph at lines 181--193
  [][][] 
  []
 
@@ -671,32 +671,32 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.183 \end{table}
-                 %]
-Overfull \hbox (56.84073pt too wide) in paragraph at lines 192--204
- [][][] 
- []
+l.199 –ó
+        –∞ —Ç–æ–∑–∏ –ø–æ–∫–∞–∑–∞—Ç–µ–ª –µ –Ω–∞–π-–≤–∏—Å–æ–∫ –∏ –Ω–µ—Å—Ç–∞–Ω–...
 
-
-Overfull \hbox (56.84073pt too wide) in paragraph at lines 213--226
- [][][] 
- []
-
-[12
 pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.232 –ò
-        –∑–≤–æ–¥–∏—Ç–µ, –∫–æ–∏—Ç–æ –º–æ–≥–∞—Ç –¥–∞ —Å–µ –Ω–∞–ø—Ä–∞–≤—è—Ç –æ—...
+l.199 –ó
+        –∞ —Ç–æ–∑–∏ –ø–æ–∫–∞–∑–∞—Ç–µ–ª –µ –Ω–∞–π-–≤–∏—Å–æ–∫ –∏ –Ω–µ—Å—Ç–∞–Ω–...
+]
+Overfull \hbox (56.84073pt too wide) in paragraph at lines 204--216
+ [][][] 
+ []
 
+
+Overfull \hbox (56.84073pt too wide) in paragraph at lines 227--240
+ [][][] 
+ []
+
+[12
 pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.232 –ò
-        –∑–≤–æ–¥–∏—Ç–µ, –∫–æ–∏—Ç–æ –º–æ–≥–∞—Ç –¥–∞ —Å–µ –Ω–∞–ø—Ä–∞–≤—è—Ç –æ—...
-] (macroeconomics_practice.bbl
+l.241 
+      ] (macroeconomics_practice.bbl
 LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 
 8.
 
@@ -708,8 +708,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.25 
-     ]
+l.9 
+    ]
 Underfull \hbox (badness 1033) in paragraph at lines 32--37
 \T2A/cmr/m/n/12 quarantining.  Journal of Economic Dynamics and Control. 2022;1
 38:104337.
@@ -733,13 +733,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--101
 ons / economic-[]synopses /
  []
 
-
+[15]
 Underfull \hbox (badness 2478) in paragraph at lines 129--134
 []\T2A/cmr/m/n/12 Zlatinov D.  Dva podhoda za analiz i otsenka na kratkosrochni
 te efekti
  []
 
-[15]) [16] (macroeconomics_practice.aux)
+) [16] (macroeconomics_practice.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -748,13 +748,13 @@ Package rerunfilecheck Info: File `macroeconomics_practice.out' has not changed
 (rerunfilecheck)             Checksum: 993A35F8412011DDCFC4261D0B319755;2097.
  ) 
 Here is how much of TeX's memory you used:
- 10925 strings out of 478584
- 171555 string characters out of 2845817
- 479839 words of memory out of 3000000
- 28908 multiletter control sequences out of 15000+600000
+ 10930 strings out of 478584
+ 171887 string characters out of 2845817
+ 476838 words of memory out of 3000000
+ 28910 multiletter control sequences out of 15000+600000
  480905 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,10n,63p,1671b,459s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,10n,63p,1302b,457s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\PC\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\latt1200.
 pk> <C:\Users\PC\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0800
 .pk> <C:\Users\PC\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx144
@@ -766,9 +766,9 @@ arm1200.pk> <C:\Users\PC\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\
 labx1728.pk> <C:\Users\PC\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600
 \larm1440.pk> <C:\Users\PC\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi60
 0\larm2074.pk>
-Output written on macroeconomics_practice.pdf (16 pages, 305483 bytes).
+Output written on macroeconomics_practice.pdf (16 pages, 307839 bytes).
 PDF statistics:
- 626 PDF objects out of 1000 (max. 8388607)
+ 627 PDF objects out of 1000 (max. 8388607)
  68 named destinations out of 1000 (max. 500000)
  99 words of extra memory for PDF output out of 10000 (max. 10000000)
 
